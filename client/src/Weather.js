@@ -40,10 +40,6 @@ const Weather = props => {
               <td>Max Temp</td>
               <td>{Math.floor(data.main.temp_max)}&deg;F</td>
             </tr>
-
-
-
-
           </tbody>
         </Table>
       </Col>
