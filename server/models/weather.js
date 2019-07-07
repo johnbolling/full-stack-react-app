@@ -7,7 +7,7 @@ const { WEATHER_API_KEY } = process.env;
 class Weather {
   static retrieveByCity(city, callback) {
     request({
-      url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API_KEY}&units=imperial`,
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API_KEY}&units=imperial`,
       json: true
     })
       .then(res => {
