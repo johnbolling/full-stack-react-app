@@ -7,7 +7,10 @@ const SSL = process.env.NODE_ENV === 'production';
 
 class Database {
   constructor() {
-    this._pool = new Pool({ connectionString: CONNECTION_STRING, ssl: SSL });
+    this._pool = new Pool({
+      connectionString: CONNECTION_STRING,
+      ssl: SSL
+    });
 
     this._pool.on('error', (err, client) => {
       console.error('Unexpected error on idle PostgreSQL client.', err);
