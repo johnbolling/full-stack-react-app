@@ -3,10 +3,9 @@ import { Row, Col, Table } from 'reactstrap';
 
 const Weather = props => {
   const { data } = props;
-  console.log(data);
 
   if (!data) {
-    return <div>none</div>;
+    return <div />;
   }
   return (
     <Row className="weather">

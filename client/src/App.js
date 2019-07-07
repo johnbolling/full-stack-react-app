@@ -55,7 +55,6 @@ class App extends React.Component {
     fetch(`/api/weather/${city}`)
       .then(res => res.json())
       .then(weather => {
-        console.log(weather);
         this.setState({ weather });
       });
   };
@@ -114,7 +113,7 @@ class App extends React.Component {
             </FormGroup>
           </Col>
         </Row>
-        <Weather data={this.state.weather}/>
+        <Weather data={this.state.weather} />
       </Container>
     );
   }
